@@ -38,24 +38,19 @@ public class ClientService {
 
     @Transactional
     public void updateClient(Long id, Client client) throws IllegalStateException {
-        Optional<Client> clientRepo = clientRepository.findById(id);
+        Optional<Client> clientOpt = clientRepository.findById(id);
 
-        if (clientRepo.isPresent()) {
-            if (!clientRepo.get().getFullName().equals(client.getFullName())
-                    && !clientRepo.get().getIncome().equals(client.getIncome())) {
-                clientRepository.save(client);
+        if (clientOpt.isPresent()) {
+            if (!clientOpt.get().getFullName().equals(client.getFullName())) {
+                clientOpt.get().setFullName(client.getFullName());
+                clientRepository.save(clientOpt.get());
             }
-            if (!clientRepo.get().getFullName().equals(client.getFullName())) {
-                Client cli = new Client(client.getId(), client.getFullName(), clientRepo.get().getIncome());
-                clientRepository.save(cli);
+            if (!clientOpt.get().getIncome().equals(client.getIncome())) {
+                clientOpt.get().setIncome(client.getIncome());
+                clientRepository.save(clientOpt.get());
             }
-            if (!clientRepo.get().getIncome().equals(client.getIncome())) {
-                Client cli2 = new Client(client.getId(), clientRepo.get().getFullName(), client.getIncome());
-                clientRepository.save(cli2);
-            }
-        } else {
-            throw new IllegalStateException("el cliente con el id solicitado, no existe");
         }
+        throw new IllegalStateException("el cliente con el id solicitado, no existe");
 
     }
 
