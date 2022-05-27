@@ -15,5 +15,4 @@ public class Client {
     private String fullName;
     private Integer income;
 
-    
 }

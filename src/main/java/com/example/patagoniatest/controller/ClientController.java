@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
@@ -35,9 +34,8 @@ public class ClientController {
     }
 
     @PutMapping("/updateClient/{id}")
-    public void updateClient(@PathVariable Long id, @RequestBody Client client){
+    public void updateClient(@PathVariable Long id, @RequestBody Client client) {
         clientService.updateClient(id, client);
-        
     }
 
     @DeleteMapping("/deleteClient/{id}")
