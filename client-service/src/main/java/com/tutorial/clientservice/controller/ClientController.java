@@ -45,11 +45,11 @@ public class ClientController {
         clientService.deleteClient(id);
     }
 
-    @PostMapping("/save-loan/{userId}")
-    public ResponseEntity<Loan> saveBike(@PathVariable("userId") Long userId, @RequestBody Loan loan) {
-        if(clientService.findById(userId) == null)
+    @PostMapping("/save-loan/{clientId}")
+    public ResponseEntity<Loan> saveBike(@PathVariable("clientId") Long clientId, @RequestBody Loan loan) {
+        if(clientService.findById(clientId) == null)
             return ResponseEntity.notFound().build();
-        clientService.saveLoan(userId, loan);
+        clientService.saveLoan(clientId, loan);
         return ResponseEntity.ok(loan);
     }
 }

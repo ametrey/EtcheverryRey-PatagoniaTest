@@ -37,7 +37,7 @@ public class LoanController {
         return ResponseEntity.ok(loanNew);
     }
 
-    @GetMapping("/byuser/{userId}")
+    @GetMapping("/byclient/{userId}")
     public ResponseEntity<List<Loan>> getByUserId(@PathVariable("userId") Long userId) {
         List<Loan> loans = loanService.byUserId(userId);
         if(loans.isEmpty())
