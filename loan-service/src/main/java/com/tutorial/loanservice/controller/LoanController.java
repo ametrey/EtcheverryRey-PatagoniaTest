@@ -1,7 +1,7 @@
-package com.tutorial.bikeservice.controller;
+package com.tutorial.loanservice.controller;
 
-import com.tutorial.bikeservice.entity.Loan;
-import com.tutorial.bikeservice.service.LoanService;
+import com.tutorial.loanservice.entity.Loan;
+import com.tutorial.loanservice.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

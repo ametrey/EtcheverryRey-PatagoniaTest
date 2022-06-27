@@ -1,4 +1,4 @@
-package com.tutorial.bikeservice;
+package com.tutorial.loanservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

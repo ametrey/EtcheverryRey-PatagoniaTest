@@ -1,7 +1,7 @@
-package com.tutorial.bikeservice.service;
+package com.tutorial.loanservice.service;
 
-import com.tutorial.bikeservice.entity.Loan;
-import com.tutorial.bikeservice.repository.LoanRepository;
+import com.tutorial.loanservice.entity.Loan;
+import com.tutorial.loanservice.repository.LoanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

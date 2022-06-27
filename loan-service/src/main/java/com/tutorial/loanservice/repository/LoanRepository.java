@@ -1,6 +1,6 @@
-package com.tutorial.bikeservice.repository;
+package com.tutorial.loanservice.repository;
 
-import com.tutorial.bikeservice.entity.Loan;
+import com.tutorial.loanservice.entity.Loan;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

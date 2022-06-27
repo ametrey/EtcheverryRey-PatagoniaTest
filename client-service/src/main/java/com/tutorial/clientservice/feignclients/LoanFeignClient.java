@@ -6,8 +6,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 
-@FeignClient(name = "bike-service")
-@RequestMapping("/bike")
+@FeignClient(name = "loan-service")
+@RequestMapping("/loan")
 public interface LoanFeignClient {
 
     @PostMapping()
