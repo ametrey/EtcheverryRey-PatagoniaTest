@@ -1,4 +1,4 @@
-package com.tutorial.bikeservice.entity;
+package com.tutorial.loanservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,12 +13,12 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Bike {
+public class Loan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String brand;
-    private String model;
-    private int userId;
+    Long id;
+    Double amount;
+    String type;
+    Long clientId;
 }
