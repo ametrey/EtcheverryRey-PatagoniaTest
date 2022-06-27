@@ -1,4 +1,4 @@
-package com.tutorial.loanservice.entity;
+package com.tutorial.bikeservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,8 +17,10 @@ public class Loan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private Double amount;
     private String type;
     private Long clientId;
+
 }

@@ -1,20 +1,19 @@
-package com.tutorial.loanservice.controller;
+package com.tutorial.bikeservice.controller;
 
-import com.tutorial.loanservice.entity.Loan;
-import com.tutorial.loanservice.service.LoanService;
+import com.tutorial.bikeservice.entity.Loan;
+import com.tutorial.bikeservice.service.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 @RequestMapping("/loan")
 public class LoanController {
 
     @Autowired
-    public LoanService loanService;
+    LoanService loanService;
 
     @GetMapping
     public ResponseEntity<List<Loan>> getAll() {
@@ -26,7 +25,7 @@ public class LoanController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Loan> getById(@PathVariable("id") Long id) {
-        Loan loan = loanService.getBikeById(id);
+        Loan loan = loanService.getLoanById(id);
         if(loan == null)
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(loan);
@@ -38,7 +37,7 @@ public class LoanController {
         return ResponseEntity.ok(loanNew);
     }
 
-    @GetMapping("/by-user/{userId}")
+    @GetMapping("/byuser/{userId}")
     public ResponseEntity<List<Loan>> getByUserId(@PathVariable("userId") Long userId) {
         List<Loan> loans = loanService.byUserId(userId);
         if(loans.isEmpty())
