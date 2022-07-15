@@ -1,28 +1,24 @@
-package com.itpatagonia.microservices.exammicroservice.model;
+package com.itpatagonia.microservices.subjectservice.model;
 
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "exam")
+@Table(name = "subject")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Exam {
+public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "examendate")
-    private LocalDate examenDate;
-
-    @Column(name = "score")
-    private Float score;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "studentid")
     private Long studentId;

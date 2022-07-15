@@ -1,13 +1,12 @@
-package com.itpatagonia.microservices.exammicroservice;
-
+package com.itpatagonia.microservices.subjectservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExamMicroserviceApplication {
+public class SubjectMicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExamMicroserviceApplication.class, args);
+		SpringApplication.run(SubjectMicroserviceApplication.class, args);
 	}
 
 }

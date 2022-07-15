@@ -1,4 +1,4 @@
-package com.itpatagonia.microservices.exammicroservice.Exceptions;
+package com.itpatagonia.microservices.subjectservice.Exceptions;
 
 public class NoEntityException extends Exception{
     public NoEntityException(String message){
