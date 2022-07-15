@@ -17,3 +17,10 @@ que los demas campos, viajaran en el cuerpo de la misma.
 configuraciones.
 
 4 - Subir lo desarrollado al mismo repositorio donde se trabajo el primer parcial.
+
+Consigna 15/07
+
+1- A partir de dos microservicios Student y Subject (estudiante y materia) comunicarnlos mediante Feign Client para que desde Estudiante se puedan leer las materias asociadas.
+2- Generar una Gateway para el acceso a ambos microservicios por separado.
+
+3- Generar al menos un "docker-file" para alguno de los servicios, de cara a poder levantarlo en Docker. 

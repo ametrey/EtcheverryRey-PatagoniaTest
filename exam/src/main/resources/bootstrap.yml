@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: exam
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8081
-
